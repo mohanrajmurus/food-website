@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icons/store.png" type="image/x-icon">
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <title>Food Store</title>
+</head>
+<body>
+    <div class="container">
+        <header class="flex justify-between items-center bg-red-300 p-4 bg-green">
+          <div class="logo">
+            <span class="text-2xl font-extrabold cursor-pointer">Food Store</span>
+          </div>
+          <div class="search--bar flex justify-start items-center relative w-1/3">
+            <input type="text" class="px-2 py-1 w-full" />
+            <img
+              src="../assets/icons/search.png"
+              alt="search"
+              class="w-4 h-4 absolute right-1"
+            />
+          </div>
+          <div class="cart--page relative">
+            <a href="./cart.html"
+              ><img
+                src="../assets/icons/cart.png"
+                alt="cart"
+                class="w-6 h-6 cursor-pointer"
+            /></a>
+            <span
+              class="text-white absolute -top-3 -right-2 px-1 bg-grey rounded-full"
+              >2</span
+            >
+          </div>
+        </header>
+        <main class="w-full h-screen flex justify-start">
+          <nav class="w-1/5 flex flex-col items-start space-y-3 bg-grey px-5">
+            <a
+              href="../index.html"
+              class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
+              >Home</a
+            >
+            <a
+              href="../index.html"
+              class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
+              >Menu</a
+            >
+            <div class="user flex flex-col items-start space-y-3 mt-5">
+              <img
+                src="../assets/icons/user.png"
+                alt="user"
+                class="w-20 h-20 cursor-pointer p-5"
+              />
+              <a
+                href="#"
+                class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
+                >Orders</a
+              >
+              <a
+                href="#"
+                class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
+                >LogOut</a
+              >
+            </div>
+          </nav>
+          <div class="edit--menu w-1/4 mt-10 mx-auto">
+            <form action="#" class="flex flex-col items-start space-y-4">
+                <div class="item--name w-full flex justify-between">
+                    <label for="name" class="">Item Name:</label>
+                    <input type="text" id="name" value="Chicken Briyani" class="border-2 p-1 ">
+                </div>
+                <div class="item--name w-full flex justify-between">
+                    <label for="image">Item image:</label>
+                    <input type="text" id="image" value="url " class="border-2 p-1"/>
+                </div>
+                <div class="item--name w-full flex justify-between">
+                    <label for="description">Item description:</label>
+                    <input type="text" id="description" value="nullam ac tortor vitae purus faucibus nisi" class="border-2 p-1"/>
+                </div>
+                <div class="item--name w-full flex justify-between">
+                    <label for="price">Item Price:</label>
+                    <input type="text" id="price" value="20" class="border-2 p-1"/>
+                </div>
+                <div class="item--name w-full flex justify-between">
+                    <label for="discount">Item Discount:</label>
+                    <input type="text" id="discount" value="40" class="border-2 p-1"/>
+                </div>
+                <button type="submit" class="self-center bg-green text-white px-2 py-1 mr-16">Update</button>
+            </form>
+          </div>
+        </main>
+        <footer class="bg-grey pl-64 py-5 flex justify-around">
+          <h1 class="text-2xl text-white font-bold">Food Store</h1>
+          <div class="company flex flex-col items-start gap-2">
+            <span class="text-white">Company</span>
+            <span class="text-white">About us</span>
+            <span class="text-white">Contact us</span>
+          </div>
+          <div class="social--links flex justify-start space-x-4">
+            <a href="#" class="hover:scale-110 ease-out duration-1000">
+              <img
+                src="../assets/icons/instagram.png"
+                alt="instagram"
+                class="w-5 h-5"
+              />
+            </a>
+            <a href="#" class="hover:scale-110 ease-out duration-1000">
+              <img
+                src="../assets/icons/twitter.png"
+                alt="instagram"
+                class="w-5 h-5"
+              />
+            </a>
+            <a href="#" class="hover:scale-110 ease-out duration-1000">
+              <img
+                src="../assets/icons/youtube.png"
+                alt="instagram"
+                class="w-5 h-5"
+              />
+            </a>
+          </div>
+        </footer>
+      </div>
+</body>
+</html>
