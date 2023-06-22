@@ -6,9 +6,7 @@ const delete_items = document.querySelectorAll(".delete--item");
 
 for (let i = 0; i < addCart.length; i++) {
   addCart[i].addEventListener("click", () => {
-    console.log("click");
     let cart = JSON.parse(localStorage.getItem("cart")) ?? [];
-    console.log(cart);
     const item_name = itemName[i].textContent;
     const item_price = itemPrice[i].textContent;
     const item_qty = 1;

@@ -66,7 +66,6 @@ decQty.forEach((ele, i) => {
 
 const calculateTotalAmount = () =>{
   const totalPrice= document.querySelectorAll('.total--price')
-console.log(totalPrice);
 
 //totalAmount.textContent = totalPrice.reduce((acc,curr) => acc += Number(curr.textContent),0)
 let sum = 0
