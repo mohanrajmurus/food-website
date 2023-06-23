@@ -3,232 +3,352 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/icons/store.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/store.png"
+      type="image/x-icon"
+    />
+    
     <link rel="stylesheet" href="./dist/output.css" />
     <title>Food Store</title>
   </head>
   <body>
-    <div class="container bg-background">
-      <header class="flex justify-between items-center bg-red-300 p-4 bg-green">
-        <div class="logo">
-          <span class="text-2xl font-extrabold cursor-pointer">Food Store</span>
-        </div>
-        <div class="search--bar flex justify-start items-center relative w-1/3">
-          <input type="text" class="px-2 py-1 w-full" />
-          <img
-            src="./assets/icons/search.png"
-            alt="search"
-            class="w-4 h-4 absolute right-1"
-          />
-        </div>
-        <div class="cart--page relative">
-          <a href="./pages/cart.html"
-            ><img
-              src="./assets/icons/cart.png"
-              alt="cart"
-              class="w-6 h-6 cursor-pointer"
-          /></a>
-          <span
-            class="text-white absolute -top-3 -right-2 px-1 bg-grey rounded-full"
-            id="cart--number">0</span
-          >
-        </div>
-      </header>
-      <main class="w-full h-full flex justify-start">
-        <nav class="w-1/5 flex flex-col items-start space-y-3 bg-grey px-5">
-          <a
-            href="#"
-            class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
-            >Home</a
-          >
-          <a
-            href="./index.html"
-            class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
-            >Menu</a
-          >
-          <div class="user flex flex-col items-start space-y-3 mt-5">
-            <img
-              src="./assets/icons/user.png"
-              alt="user"
-              class="w-20 h-20 cursor-pointer p-5"
-            />
-            <a
+    <div class="container w-full h-full flex flex-col justify-between">
+      <div class=" w-full h-screen flex bg-textcolor-sec">
+        <div class="side--menu w-1/5 h-full relative  transition-all ease-out duration-500 flex flex-col justify-between ">
+          <nav class="side--nav--close h-full flex flex-col items-start space-y-3 bg-textcolor-sec px-5 relative">
+              
+              <div class="close--menu absolute -right-3 top-1/3 cursor-pointer">
+                  <img src="./assets/icons/close.png" alt="close" class="w-8 h-8"/>
+              </div>
+            <div class="logo">
+              <span class="text-3xl font-extrabold cursor-pointer text-white px-3 rounded-md py-2 mt-2"
+                >Food Store</span
+              >
+            </div>
+            <div class="flex items-center justify-around cursor-pointer hover:scale-110 ease-out duration-1000">
+              <img src="./assets/icons/home.png" alt="home--page" class="w-7 h-7">
+              <a
               href="#"
-              class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
+              class="text-lg font-medium text-white p-5"
+              >Home</a
+            >
+            </div>
+            <div class="flex items-center justify-around cursor-pointer hover:scale-110 ease-out duration-1000">
+              <img src="./assets/icons/restaurant.png" alt="menu--card" class="w-7 h-7">
+              <a
+              href="./index.html"
+              target="_blank"
+              class="text-lg font-medium text-white p-5 "
+              >Menu</a
+            >
+            </div>
+            <div class="user flex flex-col items-start space-y-3 mt-5">
+              <div>
+                <img
+                src="./assets/icons/user.png"
+                alt="user"
+                class="w-20 h-20 cursor-pointer p-5"
+              />
+              </div>
+             <div class="flex items-center justify-around cursor-pointer hover:scale-110 ease-out duration-1000">
+              <img src="./assets/icons/order.png" alt="orders" class="w-7 h-7">
+              <a
+              href="#"
+              class="text-lg font-medium text-white p-5 "
               >Orders</a
             >
-            <a
-              href="#"
-              class="text-lg font-medium text-white p-5 hover:scale-110 ease-out duration-1000"
-              >LogOut</a
-            >
-          </div>
-        </nav>
+             </div>
+              <div class="flex items-center justify-around cursor-pointer hover:scale-110 ease-out duration-1000">
+                <img src="./assets/icons/logout.png" alt="logout" class="w-7 h-7">
+                <a
+                href="#"
+                class="text-lg font-medium text-white p-5 "
+                >LogOut</a
+              >
+              </div>
+            </div>
+          </nav>
+        </div>
         <div class="main--content w-full">
-          <section
-            class="menu--container w-full flex flex-wrap justify-center"
-            id="menu"
+          <header
+            class="header w-full flex justify-evenly items-center  p-4 bg-textcolor-sec"
           >
-          <div
-          class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-green relative"
-        >
-          <img
-            src="./assets/images/briyani.jpg"
-            alt="food"
-            class="w-40 h-40 rounded-full object-cover"
-          />
-          <span class="item--name item-des font-semibold italic" >Chicken Briyani</span>
-          <span class="text-center font-extralight italic" 
-            >nullam ac tortor vitae purus faucibus nisi
-          </span>
-          <div class="w-full flex justify-around items-center">
-            <span class="item--price text-gray text-xl font-extrabold tracking-wider"
-            >Price:$20</span
+          <div class="menubar hidden cursor-pointer">
+            <img src="./assets/icons/menu.png" alt="menu" class="w-8 h-8"/>
+        </div>
+            <div
+              class="search--bar justify-self-center  relative w-1/3"
             >
-            <span class="add--cart text-2xl bg-red px-2 cursor-pointer">+</span>
-            <span class="hidden delete--item"><img src="./assets/images/delete.png" width="16px" height="16px"></span>
-            <span><a href="./pages/editmenu.html"><img src="./assets/icons/edit.png" class="w-5 h-5 cursor-pointer"/></a></span>
+              <input type="text" class="px-2 py-1 w-full" />
+              <img
+                src="./assets/icons/search.png"
+                alt="search"
+                class="w-4 h-4 absolute right-1 top-2"
+              />
+            </div>
+            <div class="cart--page relative self-end">
+              <a href="./pages/cart.html"
+                ><img
+                  src="./assets/icons/cart.png"
+                  alt="cart"
+                  class="w-6 h-6 cursor-pointer"
+              /></a>
+              <span
+                class="text-white absolute -top-3 -right-2 px-1 bg-sec rounded-full"
+                id="cart--number"
+                >0</span
+              >
+            </div>
+          </header>
+          <main class="w-full h-full flex justify-start bg-sec">
+            <div class="main--content w-full">
+              <section
+                class="menu--container w-full flex flex-wrap justify-center"
+                id="menu"
+              >
+                <div
+                  class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-textcolor relative"
+                >
+                  <img
+                    src="./assets/images/briyani.jpg"
+                    alt="food"
+                    class="w-40 h-40 rounded-full object-cover"
+                  />
+                  <span class="item--name item-des font-semibold italic"
+                    >Chicken Briyani</span
+                  >
+                  <span class="text-center font-extralight italic text-textcolor-sec"
+                    >nullam ac tortor vitae purus faucibus nisi
+                  </span>
+                  <div class="w-full flex justify-around items-center">
+                    <span
+                      class="item--price text-gray text-xl font-extrabold tracking-wider"
+                      >Price:$20</span
+                    >
+                    <span class="add--cart text-2xl bg-sec px-2 cursor-pointer"
+                      >+</span
+                    >
+                    <span class="hidden cursor-pointer delete--item"
+                      ><img
+                        src="./assets/images/delete.png"
+                        width="16px"
+                        height="16px"
+                    /></span>
+                    <span
+                      ><a href="./pages/editmenu.html"
+                        ><img
+                          src="./assets/icons/edit.png"
+                          class="w-5 h-5 cursor-pointer" /></a
+                    ></span>
+                  </div>
+                  <!--  <span
+                      class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-sec"
+                       id="item--disc">40%</span
+                    > -->
+                </div>
+                <div
+                  class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-textcolor relative"
+                >
+                  <img
+                    src="./assets/images/briyani.jpg"
+                    alt="food"
+                    class="w-40 h-40 rounded-full object-cover"
+                  />
+                  <span class="item--name item-des font-semibold italic"
+                    >Mutton Briyani</span
+                  >
+                  <span class="text-center font-extralight italic text-textcolor-sec"
+                    >nullam ac tortor vitae purus faucibus nisi
+                  </span>
+                  <div class="w-full flex justify-around items-center">
+                    <span
+                      class="item--price text-gray text-xl font-extrabold tracking-wider"
+                      >Price:$40</span
+                    >
+                    <span class="add--cart text-2xl bg-sec px-2 cursor-pointer"
+                      >+</span
+                    >
+                    <span class="hidden cursor-pointer delete--item"
+                      ><img
+                        src="./assets/images/delete.png"
+                        width="16px"
+                        height="16px"
+                    /></span>
+                    <span
+                      ><a href="./pages/editmenu.html"
+                        ><img
+                          src="./assets/icons/edit.png"
+                          class="w-5 h-5 cursor-pointer" /></a
+                    ></span>
+                  </div>
+                  <!--  <span
+                          class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-sec"
+                           id="item--disc">40%</span
+                        > -->
+                </div>
+                <div
+                  class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-textcolor relative"
+                >
+                  <img
+                    src="./assets/images/briyani.jpg"
+                    alt="food"
+                    class="w-40 h-40 rounded-full object-cover"
+                  />
+                  <span class="item--name item-des font-semibold italic"
+                    >Egg Briyani</span
+                  >
+                  <span class="text-center font-extralight italic text-textcolor-sec"
+                    >nullam ac tortor vitae purus faucibus nisi
+                  </span>
+                  <div class="w-full flex justify-around items-center">
+                    <span
+                      class="item--price text-gray text-xl font-extrabold tracking-wider"
+                      >Price:$15</span
+                    >
+                    <span class="add--cart text-2xl bg-sec px-2 cursor-pointer"
+                      >+</span
+                    >
+                    <span class="hidden cursor-pointer delete--item"
+                      ><img
+                        src="./assets/images/delete.png"
+                        width="16px"
+                        height="16px"
+                    /></span>
+                    <span
+                      ><a href="./pages/editmenu.html"
+                        ><img
+                          src="./assets/icons/edit.png"
+                          class="w-5 h-5 cursor-pointer" /></a
+                    ></span>
+                  </div>
+                  <!--  <span
+                          class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-sec"
+                           id="item--disc">40%</span
+                        > -->
+                </div>
+                <div
+                  class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-textcolor relative"
+                >
+                  <img
+                    src="./assets/images/briyani.jpg"
+                    alt="food"
+                    class="w-40 h-40 rounded-full object-cover"
+                  />
+                  <span class="item--name item-des font-semibold italic "
+                    >Veg Briyani</span
+                  >
+                  <span class="text-center font-extralight italic text-textcolor-sec"
+                    >nullam ac tortor vitae purus faucibus nisi
+                  </span>
+                  <div class="w-full flex justify-around items-center">
+                    <span
+                      class="item--price text-gray text-xl font-extrabold tracking-wider"
+                      >Price:$10</span
+                    >
+                    <span class="add--cart text-2xl bg-sec px-2 cursor-pointer"
+                      >+</span
+                    >
+                    <span class="hidden cursor-pointer delete--item"
+                      ><img
+                        src="./assets/images/delete.png"
+                        width="16px"
+                        height="16px"
+                    /></span>
+                    <span
+                      ><a href="./pages/editmenu.html"
+                        ><img
+                          src="./assets/icons/edit.png"
+                          class="w-5 h-5 cursor-pointer" /></a
+                    ></span>
+                  </div>
+                  <!--  <span
+                          class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-sec"
+                           id="item--disc">40%</span
+                        > -->
+                </div>
+                <div
+                  class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-textcolor relative"
+                >
+                  <img
+                    src="./assets/images/briyani.jpg"
+                    alt="food"
+                    class="w-40 h-40 rounded-full object-cover"
+                  />
+                  <span class="item--name item-des font-semibold italic"
+                    >Fish Briyani</span
+                  >
+                  <span class="text-center font-extralight italic text-textcolor-sec"
+                    >nullam ac tortor vitae purus faucibus nisi
+                  </span>
+                  <div class="w-full flex justify-around items-center">
+                    <span
+                      class="item--price text-gray text-xl font-extrabold tracking-wider"
+                      >Price:$30</span
+                    >
+                    <span class="add--cart text-2xl bg-sec px-2 cursor-pointer"
+                      >+</span
+                    >
+                    <span class="hidden cursor-pointer delete--item"
+                      ><img
+                        src="./assets/images/delete.png"
+                        width="16px"
+                        height="16px"
+                    /></span>
+                    <span
+                      ><a href="./pages/editmenu.html"
+                        ><img
+                          src="./assets/icons/edit.png"
+                          class="w-5 h-5 cursor-pointer" /></a
+                    ></span>
+                  </div>
+                  <!--  <span
+                          class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-sec"
+                           id="item--disc">40%</span
+                        > -->
+                </div>
+              </section>
+            </div>
+          </main>
+          
+        </div>
+      </div>
+      <div class="footer--content">
+        <footer class="py-5 flex justify-evenly bg-textcolor-sec">
+          <h1 class="text-3xl text-white font-bold">Food Store</h1>
+          <div class="company flex flex-col items-start gap-2">
+            <span class="text-white">Company</span>
+            <span class="text-white">About us</span>
+            <span class="text-white">Contact us</span>
           </div>
-         <!--  <span
-            class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-red"
-             id="item--disc">40%</span
-          > -->
-        </div>
-        <div
-              class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-green relative"
-            >
+          <div class="social--links flex justify-start space-x-4">
+            <a href="#" class="hover:scale-110 ease-out duration-1000">
               <img
-                src="./assets/images/briyani.jpg"
-                alt="food"
-                class="w-40 h-40 rounded-full object-cover"
+                src="./assets/icons/instagram.png"
+                alt="instagram"
+                class="w-5 h-5"
               />
-              <span class="item--name item-des font-semibold italic" >Mutton Briyani</span>
-              <span class="text-center font-extralight italic" 
-                >nullam ac tortor vitae purus faucibus nisi
-              </span>
-              <div class="w-full flex justify-around items-center">
-                <span class="item--price text-gray text-xl font-extrabold tracking-wider"
-                >Price:$40</span
-                >
-                <span class="add--cart text-2xl bg-red px-2 cursor-pointer">+</span>
-                <span class="hidden delete--item"><img src="./assets/images/delete.png" width="16px" height="16px"></span>
-                <span><a href="./pages/editmenu.html"><img src="./assets/icons/edit.png" class="w-5 h-5 cursor-pointer"/></a></span>
-              </div>
-             <!--  <span
-                class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-red"
-                 id="item--disc">40%</span
-              > -->
-            </div>
-            <div
-              class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-green relative"
-            >
+            </a>
+            <a href="#" class="hover:scale-110 ease-out duration-1000">
               <img
-                src="./assets/images/briyani.jpg"
-                alt="food"
-                class="w-40 h-40 rounded-full object-cover"
+                src="./assets/icons/twitter.png"
+                alt="instagram"
+                class="w-5 h-5"
               />
-              <span class="item--name item-des font-semibold italic" >Egg Briyani</span>
-              <span class="text-center font-extralight italic" 
-                >nullam ac tortor vitae purus faucibus nisi
-              </span>
-              <div class="w-full flex justify-around items-center">
-                <span class="item--price text-gray text-xl font-extrabold tracking-wider"
-                >Price:$15</span
-                >
-                <span class="add--cart text-2xl bg-red px-2 cursor-pointer">+</span>
-                <span class="hidden delete--item"><img src="./assets/images/delete.png" width="16px" height="16px"></span>
-                <span><a href="./pages/editmenu.html"><img src="./assets/icons/edit.png" class="w-5 h-5 cursor-pointer"/></a></span>
-              </div>
-             <!--  <span
-                class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-red"
-                 id="item--disc">40%</span
-              > -->
-            </div>
-            <div
-              class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-green relative"
-            >
+            </a>
+            <a href="#" class="hover:scale-110 ease-out duration-1000">
               <img
-                src="./assets/images/briyani.jpg"
-                alt="food"
-                class="w-40 h-40 rounded-full object-cover"
+                src="./assets/icons/youtube.png"
+                alt="instagram"
+                class="w-5 h-5"
               />
-              <span class="item--name item-des font-semibold italic" >Veg Briyani</span>
-              <span class="text-center font-extralight italic" 
-                >nullam ac tortor vitae purus faucibus nisi
-              </span>
-              <div class="w-full flex justify-around items-center">
-                <span class="item--price text-gray text-xl font-extrabold tracking-wider"
-                >Price:$10</span
-                >
-                <span class="add--cart text-2xl bg-red px-2 cursor-pointer">+</span>
-                <span class="hidden delete--item"><img src="./assets/images/delete.png" width="16px" height="16px"></span>
-                <span><a href="./pages/editmenu.html"><img src="./assets/icons/edit.png" class="w-5 h-5 cursor-pointer"/></a></span>
-              </div>
-             <!--  <span
-                class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-red"
-                 id="item--disc">40%</span
-              > -->
-            </div>
-            <div
-              class="card--container w-1/2 lg:w-1/5 flex flex-col items-center m-5 rounded-md gap-2 p-3 bg-green relative"
-            >
-              <img
-                src="./assets/images/briyani.jpg"
-                alt="food"
-                class="w-40 h-40 rounded-full object-cover"
-              />
-              <span class="item--name item-des font-semibold italic" >Fish Briyani</span>
-              <span class="text-center font-extralight italic" 
-                >nullam ac tortor vitae purus faucibus nisi
-              </span>
-              <div class="w-full flex justify-around items-center">
-                <span class="item--price text-gray text-xl font-extrabold tracking-wider"
-                >Price:$30</span
-                >
-                <span class="add--cart text-2xl bg-red px-2 cursor-pointer">+</span>
-                <span class="hidden delete--item"><img src="./assets/images/delete.png" width="16px" height="16px"></span>
-                <span><a href="./pages/editmenu.html"><img src="./assets/icons/edit.png" class="w-5 h-5 cursor-pointer"/></a></span>
-              </div>
-             <!--  <span
-                class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-red"
-                 id="item--disc">40%</span
-              > -->
-            </div>
-          </section>
-        </div>
-      </main>
-      <footer class="bg-grey pl-64 py-5 flex justify-around">
-        <h1 class="text-2xl text-white font-bold">Food Store</h1>
-        <div class="company flex flex-col items-start gap-2">
-          <span class="text-white">Company</span>
-          <span class="text-white">About us</span>
-          <span class="text-white">Contact us</span>
-        </div>
-        <div class="social--links flex justify-start space-x-4">
-          <a href="#" class="hover:scale-110 ease-out duration-1000">
-            <img
-              src="./assets/icons/instagram.png"
-              alt="instagram"
-              class="w-5 h-5"
-            />
-          </a>
-          <a href="#" class="hover:scale-110 ease-out duration-1000">
-            <img
-              src="./assets/icons/twitter.png"
-              alt="instagram"
-              class="w-5 h-5"
-            />
-          </a>
-          <a href="#" class="hover:scale-110 ease-out duration-1000">
-            <img
-              src="./assets/icons/youtube.png"
-              alt="instagram"
-              class="w-5 h-5"
-            />
-          </a>
-        </div>
-      </footer>
+            </a>
+          </div>
+        </footer> 
+      </div>
     </div>
     <script src="./main.js"></script>
   </body>
 </html>
+
+

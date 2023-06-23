@@ -627,6 +627,10 @@ video {
   right: -0.5rem;
 }
 
+.-right-3 {
+  right: -0.75rem;
+}
+
 .-right-5 {
   right: -1.25rem;
 }
@@ -647,16 +651,28 @@ video {
   right: 0.25rem;
 }
 
+.top-1\/3 {
+  top: 33.333333%;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
 
 .isolation-auto {
   isolation: auto;
-}
-
-.col-span-4 {
-  grid-column: span 4 / span 4;
 }
 
 .float-right {
@@ -831,6 +847,14 @@ video {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -875,8 +899,24 @@ video {
   width: 1.5rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .flex-shrink {
@@ -1211,12 +1251,12 @@ video {
   grid-auto-flow: column dense;
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1809,6 +1849,10 @@ video {
   border-width: 2px;
 }
 
+.border-0 {
+  border-width: 0px;
+}
+
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -1871,29 +1915,34 @@ video {
   border-style: none;
 }
 
+.border-textcolor {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 254 / var(--tw-border-opacity));
+}
+
+.border-textcolor-sec {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 161 178 / var(--tw-border-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-background {
+.bg-sec {
   --tw-bg-opacity: 1;
-  background-color: rgb(242 244 246 / var(--tw-bg-opacity));
+  background-color: rgb(114 117 126 / var(--tw-bg-opacity));
 }
 
-.bg-green {
+.bg-textcolor {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 235 199 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 254 / var(--tw-bg-opacity));
 }
 
-.bg-grey {
+.bg-textcolor-sec {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 33 77 / var(--tw-bg-opacity));
-}
-
-.bg-red {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 84 112 / var(--tw-bg-opacity));
+  background-color: rgb(148 161 178 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
@@ -2036,6 +2085,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -2044,6 +2098,11 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-5 {
@@ -2114,6 +2173,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -2222,14 +2286,19 @@ video {
   color: rgb(51 102 153 / .35);
 }
 
-.text-red {
+.text-textcolor-sec {
   --tw-text-opacity: 1;
-  color: rgb(255 84 112 / var(--tw-text-opacity));
+  color: rgb(148 161 178 / var(--tw-text-opacity));
 }
 
-.text-white {
+.text-textcolor {
   --tw-text-opacity: 1;
   color: rgb(255 255 254 / var(--tw-text-opacity));
+}
+
+.text-sec {
+  --tw-text-opacity: 1;
+  color: rgb(114 117 126 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2532,8 +2601,18 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-1000 {
   transition-duration: 1000ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .ease-in {
@@ -2551,6 +2630,10 @@ video {
 .content-\[\'this-is-also-valid\]-weirdly-enough\'\] {
   --tw-content: 'this-is-also-valid]-weirdly-enough';
   content: var(--tw-content);
+}
+
+.side--nav--close{
+  display: hidden;
 }
 
 @media (min-width: 640px) {
@@ -2607,6 +2690,11 @@ video {
 .hover\:before\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .focus\:hover\:text-center:hover:focus {
