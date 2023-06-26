@@ -4,6 +4,14 @@ const itemPrice = document.querySelectorAll(".item--price");
 const cart_display = document.getElementById("cart--number");
 const delete_items = document.querySelectorAll(".delete--item");
 
+//drop Down menu
+
+const dropDown = document.getElementById('drop--down');
+const subMenu = document.getElementById('sub--menu')
+dropDown.addEventListener('click',()=>{
+  subMenu.classList.toggle('hidden')
+})
+
 for (let i = 0; i < addCart.length; i++) {
   addCart[i].addEventListener("click", () => {
     let cart = JSON.parse(localStorage.getItem("cart")) ?? [];
@@ -70,21 +78,21 @@ menuBar.addEventListener('click',() => {
 //cart Display
 
 
-let cartData = JSON.parse(localStorage.getItem("cart"));
+let cartData = JSON.parse(localStorage.getItem("cart"))||[];
 const totalAmount = document.getElementById('total--amount');
 const cart_div = document.getElementById("cart--item");
 cart_display.textContent = cartData.length;
 
-cartData.map((data, i) => {
+[...cartData].map((data, i) => {
   const price = data.item_price.split("$");
 
   return cart_div.insertAdjacentHTML(
     "afterbegin",
-    `<div class="cart--item w-full grid grid-cols-4 p-2 border-b-2 border-textcolor"><span class="text-center text-textcolor">${
+    `<div class="cart--item w-full grid grid-cols-4 py-2 border-b-2 border-textcolor"><span class="text-center text-textcolor">${
       data.item_name
-    }</span><span class="text-center flex justify-center space-x-3"><span class="text-xl text-white px-2 bg-grey cursor-pointer text-textcolor" id='decreament'>-</span><span class="text-2xl text-textcolor" id='qty'>${
+    }</span><span class="text-center flex justify-center space-x-3"><span class="text-xl text-white px-3 rounded-md bg-textcolor-sec cursor-pointer text-textcolor" id='decreament'>-</span><span class="text-2xl text-textcolor" id='qty'>${
       data.item_qty
-    }</span><span class="text-xl text-white px-2 bg-grey cursor-pointer text-textcolor" id='increament'>+</span></span><span class="text-center text-textcolor">${
+    }</span><span class="text-xl text-white px-2 bg-textcolor-sec cursor-pointer text-textcolor rounded-md" id='increament'>+</span></span><span class="text-center text-textcolor">${
       price[1]
     }</span><span class="text-center total--price text-textcolor">${
       Number(price[1]) * data.item_qty
@@ -138,14 +146,16 @@ decQty.forEach((ele, i) => {
 const calculateTotalAmount = () =>{
   const totalPrice = document.querySelectorAll('.total--price');
 
-  //console.log(totalPrice);
+  //console.log([totalPrice]);
 
-//totalAmount.textContent = totalPrice?.reduce((acc,curr) => acc += Number(curr.textContent),0)
-let sum = 0
+totalAmount.textContent = [...totalPrice].reduce((acc,curr) => acc += Number(curr.textContent),0)
+/* let sum = 0
 for(const ele of totalPrice){
   sum += Number(ele.textContent)
 }
 
-totalAmount.textContent = sum
+totalAmount.textContent = sum */
 }
 calculateTotalAmount()
+
+

@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="./dist/output.css" />
     <title>Food Store</title>
   </head>
-  <body>
-    <div class="container w-full h-full flex flex-col justify-between">
-      <div class=" w-full h-screen flex bg-textcolor-sec">
-        <div class="side--menu w-1/5 h-full relative  transition-all ease-out duration-500 flex flex-col justify-between ">
+  <body class="bg-textcolor-sec">
+    <div class="container m-auto flex flex-col justify-between">
+      <div class=" w-full flex bg-textcolor-sec">
+        <div class="side--menu w-3/4 absolute z-10 lg:w-1/5 h-full  transition ease-out duration-500 flex flex-col justify-between ">
           <nav class="side--nav--close h-full flex flex-col items-start space-y-3 bg-textcolor-sec px-5 relative">
               
               <div class="close--menu absolute -right-3 top-1/3 cursor-pointer">
@@ -34,14 +34,19 @@
               >Home</a
             >
             </div>
-            <div class="flex items-center justify-around cursor-pointer hover:scale-110 ease-out duration-1000">
+            <div class="flex items-center justify-around cursor-pointer hover:scale-110 ease-out duration-1000 relative">
               <img src="./assets/icons/restaurant.png" alt="menu--card" class="w-7 h-7">
               <a
               href="./index.html"
               target="_blank"
               class="text-lg font-medium text-white p-5 "
-              >Menu</a
-            >
+              >Menu</a>
+              <span id="drop--down"><img src="./assets/icons/down-chevron.png" alt="down--menu" class="w-4 h-4"></span>
+            </div>
+            <div id="sub--menu" class=" flex flex-col space-y-3 relative left-14 cursor-pointer">
+              <span class="px-5 py-2 text-md hover:scale-x-110 transition-all ease-out duration-500 rounded-md  bg-sec text-textcolor">Main Course</span>
+              <span class="px-5 py-2 text-md hover:scale-x-110 transition-all ease-out duration-500 rounded-md  bg-sec text-textcolor">Starters</span>
+              <span class="px-5 py-2 text-md hover:scale-x-110 transition-all ease-out duration-500 rounded-md  bg-sec text-textcolor">Beverages</span>
             </div>
             <div class="user flex flex-col items-start space-y-3 mt-5">
               <div>
@@ -78,13 +83,13 @@
             <img src="./assets/icons/menu.png" alt="menu" class="w-8 h-8"/>
         </div>
             <div
-              class="search--bar justify-self-center  relative w-1/3"
+              class="search--bar justify-self-center  relative w-1/3 "
             >
-              <input type="text" class="px-2 py-1 w-full" />
-              <img
+              <input type="text" class="px-2 py-1 w-full border-2  border-textcolor rounded focus:outline-none focus:border-sec " />
+                           <img
                 src="./assets/icons/search.png"
                 alt="search"
-                class="w-4 h-4 absolute right-1 top-2"
+                class="w-4 h-4 absolute right-2 top-2"
               />
             </div>
             <div class="cart--page relative self-end">
@@ -302,11 +307,13 @@
                           class="w-5 h-5 cursor-pointer" /></a
                     ></span>
                   </div>
+                  
                   <!--  <span
                           class="absolute -top-4 -right-5 rounded-full p-2 text-gray bg-sec"
                            id="item--disc">40%</span
                         > -->
                 </div>
+                
               </section>
             </div>
           </main>
