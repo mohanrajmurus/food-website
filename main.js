@@ -56,18 +56,18 @@ const sidemenu = document.querySelector('.side--menu');
 const menuBar = document.querySelector('.menubar')
 const header = document.querySelector('.header')
 closeMenu.addEventListener('click',(e)=>{
-  sidemenu.classList.add('hidden')
-  menuBar.classList.remove('hidden')
-  menuBar.classList.add('text-left')
-  header.classList.remove('justify-evenly')
-  header.classList.add('justify-between')
+  sidemenu.classList.toggle('hidden')
+  menuBar.classList.toggle('hidden')
+  menuBar.classList.toggle('text-left')
+  header.classList.toggle('justify-evenly')
+  header.classList.toggle('justify-between')
 })
 
 menuBar.addEventListener('click',() => {
-  sidemenu.classList.remove('hidden')
-  menuBar.classList.add('hidden')
-  header.classList.remove('justify-between')
-  header.classList.add('justify-evenly')
+  sidemenu.classList.toggle('hidden')
+  menuBar.classList.toggle('hidden')
+  header.classList.toggle('justify-between')
+  header.classList.toggle('justify-evenly')
  
 
 })
